@@ -101,11 +101,11 @@ public class MinesweeperGame {
     private static void checkIfGameIsOver() {
         boolean isAllOpened = isAllCellOpened();
         if (isAllOpened) {
-            changeGaeStatusToWin();
+            changeGameStatusToWin();
         }
     }
 
-    private static void changeGaeStatusToWin() {
+    private static void changeGameStatusToWin() {
         gameStatus = 1;
     }
 
