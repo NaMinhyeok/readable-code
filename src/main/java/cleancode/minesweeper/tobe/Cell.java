@@ -7,20 +7,20 @@ public class Cell {
     private static final String UNCHECKED_SIGN = "□";
     private static final String EMPTY_SIGN = "■";
 
-    private int nearByLandMineCount;
+    private int nearbyLandMineCount;
     private boolean isLandMine;
     private boolean isFlagged;
     private boolean isOpened;
 
-    public Cell(int nearByLandMineCount, boolean isLandMine, boolean isFlagged, boolean isOpened) {
-        this.nearByLandMineCount = nearByLandMineCount;
+    private Cell(int nearbyLandMineCount, boolean isLandMine, boolean isFlagged, boolean isOpened) {
+        this.nearbyLandMineCount = nearbyLandMineCount;
         this.isLandMine = isLandMine;
         this.isFlagged = isFlagged;
         this.isOpened = isOpened;
     }
 
-    public static Cell of(int nearByLandMineCount, boolean isLandMine, boolean isFlagged, boolean isOpened) {
-        return new Cell(nearByLandMineCount, isLandMine, isFlagged, isOpened);
+    public static Cell of(int nearbyLandMineCount, boolean isLandMine, boolean isFlagged, boolean isOpened) {
+        return new Cell(nearbyLandMineCount, isLandMine, isFlagged, isOpened);
     }
 
     public static Cell create() {
@@ -31,8 +31,8 @@ public class Cell {
         this.isLandMine = true;
     }
 
-    public void updateNearByLandMineCount(int count) {
-        this.nearByLandMineCount = count;
+    public void updateNearbyLandMineCount(int count) {
+        this.nearbyLandMineCount = count;
     }
 
     public void flag() {
@@ -56,7 +56,7 @@ public class Cell {
     }
 
     public boolean hasLandMineCount() {
-        return this.nearByLandMineCount != 0;
+        return this.nearbyLandMineCount != 0;
     }
 
     public String getSign() {
@@ -65,7 +65,7 @@ public class Cell {
                 return LAND_MINE_SIGN;
             }
             if (hasLandMineCount()) {
-                return String.valueOf(nearByLandMineCount);
+                return String.valueOf(nearbyLandMineCount);
             }
             return EMPTY_SIGN;
         }

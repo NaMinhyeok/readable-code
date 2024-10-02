@@ -1,6 +1,6 @@
 package cleancode.studycafe.tobe.io;
 
-import cleancode.studycafe.tobe.exception.AppException;
+import cleancode.minesweeper.tobe.GameException;
 import cleancode.studycafe.tobe.model.StudyCafePass;
 import cleancode.studycafe.tobe.model.StudyCafePassType;
 
@@ -23,7 +23,7 @@ public class InputHandler {
         if ("3".equals(userInput)) {
             return StudyCafePassType.FIXED;
         }
-        throw new AppException("잘못된 입력입니다.");
+        throw new GameException("잘못된 입력입니다.");
     }
 
     public StudyCafePass getSelectPass(List<StudyCafePass> passes) {
