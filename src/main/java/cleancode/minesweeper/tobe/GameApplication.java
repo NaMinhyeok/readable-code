@@ -7,7 +7,7 @@ import cleancode.minesweeper.tobe.io.ConsoleOutputHandler;
 import cleancode.minesweeper.tobe.io.InputHandler;
 import cleancode.minesweeper.tobe.io.OutputHandler;
 
-public class MinesweeperGame {
+public class GameApplication {
     public static void main(String[] args) {
         GameLevel gameLevel = new Beginner();
         InputHandler inputHandler = new ConsoleInputHandler();
