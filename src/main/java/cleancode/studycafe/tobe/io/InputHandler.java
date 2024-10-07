@@ -1,6 +1,6 @@
 package cleancode.studycafe.tobe.io;
 
-import cleancode.minesweeper.tobe.GameException;
+import cleancode.minesweeper.tobe.minsweeper.exception.GameException;
 import cleancode.studycafe.tobe.model.StudyCafePass;
 import cleancode.studycafe.tobe.model.StudyCafePassType;
 
