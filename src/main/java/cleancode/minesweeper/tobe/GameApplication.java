@@ -2,7 +2,7 @@ package cleancode.minesweeper.tobe;
 
 import cleancode.minesweeper.tobe.minsweeper.Minesweeper;
 import cleancode.minesweeper.tobe.minsweeper.config.GameConfig;
-import cleancode.minesweeper.tobe.minsweeper.gamelebel.Beginner;
+import cleancode.minesweeper.tobe.minsweeper.gamelebel.Advanced;
 import cleancode.minesweeper.tobe.minsweeper.io.ConsoleInputHandler;
 import cleancode.minesweeper.tobe.minsweeper.io.ConsoleOutputHandler;
 
@@ -10,7 +10,7 @@ public class GameApplication {
     public static void main(String[] args) {
 
         GameConfig gameConfig = new GameConfig(
-            new Beginner(),
+            new Advanced(),
             new ConsoleInputHandler(),
             new ConsoleOutputHandler()
         );
